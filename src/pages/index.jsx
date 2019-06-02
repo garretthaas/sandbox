@@ -5,10 +5,10 @@ import Layout from "../layout";
 import PostListing from "../components/PostListing/PostListing";
 import SEO from "../components/SEO/SEO";
 import config from "../../data/SiteConfig";
+import exifImage from "../../static/images/image.jpg";
+import exifJs from "../../static/scripts/exif.js";
 
 function exifTest() {
-  import exifImage from "../../static/images/image.jpg";
-  import exifJs from "../../static/scripts/exif.js";
   // Import result is the URL of your image
   return 
     
