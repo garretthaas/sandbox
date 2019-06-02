@@ -6,7 +6,6 @@ import PostListing from "../components/PostListing/PostListing";
 import SEO from "../components/SEO/SEO";
 import config from "../../data/SiteConfig";
 import exifImage from "../../static/images/image.jpg";
-import init from "../../static/scripts/init.js";
 
 class Index extends React.Component {
   render() {
@@ -14,17 +13,9 @@ class Index extends React.Component {
     return (
       <Layout>
         <div className="index-container">
-          <Helmet>
-            <title>{config.siteTitle}</title>
-            <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/exif-js/2.3.0/exif.min.js"></script>
-            <script src={init} />
-          </Helmet>
+          <Helmet title={config.siteTitle} />
           <SEO />
-          <div className="exifTest">
-            <img id="the-img" src={exifImage} alt="Logo" />
-            <p id="pic-info"></p>
-            <p id="map-link"></p>
-          </div>
+          <img src={exifImage} alt="image" />
           <PostListing postEdges={postEdges} />
         </div>
       </Layout>
