@@ -1,3 +1,5 @@
+import React from "react";
+
 <script
     dangerouslySetInnerHTML={{
         __html: `document.getElementById("the-img").onclick = function() {
