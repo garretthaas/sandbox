@@ -16,8 +16,8 @@ class Index extends React.Component {
         <div className="index-container">
           <Helmet>
             <title>{config.siteTitle}</title>
-            <script src={init} />
             <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/exif-js/2.3.0/exif.min.js"></script>
+            <script src={init} />
           </Helmet>
           <SEO />
           <div className="exifTest">
