@@ -1,5 +1,5 @@
 
-document.getElementById("the-img").onclick = function() {
+function exifCode() { return {__html: <script>document.getElementById("the-img").onclick = function() {
 
   EXIF.getData(this, function() {
 
@@ -44,3 +44,5 @@ function ConvertDMSToDD(degrees, minutes, seconds, direction) {
   
   return dd;
 }
+</script>};
+<div dangerouslySetInnerHTML={exifCode()} />
