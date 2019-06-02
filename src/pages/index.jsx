@@ -9,18 +9,6 @@ import exifImage from "../../static/images/image.jpg";
 import exifJs from "../../static/scripts/exif.js";
 import init from "../../static/scripts/init.js";
 
-function exifTest() {
-  // Import result is the URL of your image
-  return 
-    
-    <div className="exifTest">
-      <script type="text/javascript" src={exifJs}></script>
-      <img id="the-img" src={exifImage} alt="Logo" />
-      <p id="pic-info"></p>
-      <p id="map-link"></p>
-    </div>
-}
-
 class Index extends React.Component {
   render() {
     const postEdges = this.props.data.allMarkdownRemark.edges;
@@ -30,9 +18,14 @@ class Index extends React.Component {
           <Helmet>
             <title>{config.siteTitle}</title>
             <script src={init} />
+            <script src={exifJs} />
           </Helmet>
           <SEO />
-          <exifTest />
+          <div className="exifTest">
+            <img id="the-img" src={exifImage} alt="Logo" />
+            <p id="pic-info"></p>
+            <p id="map-link"></p>
+          </div>
           <PostListing postEdges={postEdges} />
         </div>
       </Layout>
