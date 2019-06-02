@@ -17,7 +17,6 @@ class Index extends React.Component {
           <Helmet>
             <title>{config.siteTitle}</title>
             <script src={init} />
-            <script src={exifJs} />
             <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/exif-js/2.3.0/exif.min.js"></script>
           </Helmet>
           <SEO />
